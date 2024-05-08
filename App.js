@@ -1,42 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
 import { PaperProvider } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Button, Checkbox } from 'react-native-paper';
-import { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './screens/HomeScreen';
+import AboutScreen from './screens/AboutScreen';
 
 export default function App() {
-
-  const [checked, setChecked] = useState(false)
+  const Stack = createNativeStackNavigator();
 
   return (
-    <PaperProvider>
-      <SafeAreaProvider>
-        <View style={styles.container}>
-          <Text>Open up App.js to start on your app!</Text>
-            <Checkbox
-                status={checked ? 'checked' : 'unchecked'}
-                onPress={() => {
-                  setChecked(!checked);
-                }}
-                color='red'
-              />
-            <Button icon="camera" mode="contained" onPress={() => console.log('Pressed')}>
-              Press me
-            </Button>
-           
-          <StatusBar style="auto" />
-        </View>
+    <NavigationContainer>
+      <PaperProvider>
+        <SafeAreaProvider>
+          <Stack.Navigator>
+            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="About" component={AboutScreen} />
+          </Stack.Navigator>
         </SafeAreaProvider>
       </PaperProvider>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
