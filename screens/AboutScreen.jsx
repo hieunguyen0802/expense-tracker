@@ -3,11 +3,11 @@ import React from 'react'
 import { Button } from 'react-native-paper'
 
 
-const AboutScreen = ({navigator}) => {
+const AboutScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text>About Screen</Text>
-      <Button textColor='pink' mode='text' onPress={() => navigator.navigate("Home")}>
+      <Button title='click for fun' textColor='pink' mode='text' onPress={() => navigation.navigate("Home")}>
         Go to Home
       </Button>
     </View>
