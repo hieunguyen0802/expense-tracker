@@ -6,9 +6,11 @@ const HomeScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text>HomeScreen</Text>
-      <Button title='click me' textColor='pink' mode='text' onPress={() => navigation.navigate("About")}>
-        Go to About
+      <Button textColor='white' buttonColor='#ADD8E6' mode='contained' 
+        onPress={() => navigation.navigate("About", {name:"Híu Nè"})}>
+        go to about
       </Button>
+     
     </View>
   )
 }
