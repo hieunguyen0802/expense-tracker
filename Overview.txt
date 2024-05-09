@@ -1,0 +1,25 @@
+Expense Tracker ideas:
+
+1. Welcome screen - stack navigation
+- one center main title to welcome
+- one center button -> "Get Started" 
+
+2. Main screen - tab navigation
+- header: screen title
+- bottom: tab navigation: expense / analysis / acounts & categories 
+
+2.1. expense screen: shows every records, expense/ income/ total as a tab , organized by month / day / week  (using modal)
+2.2. analysis: chart, diagram (using modal)
+2.3. account & categories: config and CRUD (using modal)
+
+3. drawer navigation: setting / preferences: export and delete (drawer navigation)
+
+-----------------------------------------------------------------------------
+Expense Tracker tech-stack:
+- react native
+- react native paper
+- react native navigation
+- axios
+- supabase (backend and db)
+
+
