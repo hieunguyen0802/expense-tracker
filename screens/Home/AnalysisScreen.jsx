@@ -1,17 +1,15 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const DetailScreen = ({ route }) => {
-  const { data } = route.params;
+const AnalysisScreen = ({ route }) => {
   return (
     <View style={styles.container}>
       <Text>DetailScreen</Text>
-      <Text>{data.id}</Text>
     </View>
   );
 };
 
-export default DetailScreen;
+export default AnalysisScreen;
 
 const styles = StyleSheet.create({
   container: {
